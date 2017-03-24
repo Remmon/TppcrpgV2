@@ -83,10 +83,10 @@ public class trainerManager {
     
     public void loadLogFromFile(){  //Loads previous log objects from a file.
         FileInputStream fiStream = null;
-        File f = new File("D:\\tppcJavafiles\\trainer.tmp");
+        File f = new File("C:\\tppcJavafiles\\trainer.tmp");
         if(f.exists()){
             try {
-                fiStream = new FileInputStream("D:\\tppcJavafiles\\trainer.tmp");
+                fiStream = new FileInputStream("C:\\tppcJavafiles\\trainer.tmp");
                 ObjectInputStream oiStream = new ObjectInputStream(fiStream);
                 trainerList = (ArrayList<trainer>) oiStream.readObject();
                 oiStream.close();
@@ -109,7 +109,7 @@ public class trainerManager {
     public void saveLogToFile(){ //Saves all log objects to file.
         FileOutputStream foStream = null;
         try {
-            foStream = new FileOutputStream("D:\\tppcJavafiles\\trainer.tmp");
+            foStream = new FileOutputStream("C:\\tppcJavafiles\\trainer.tmp");
             ObjectOutputStream ooStream = new ObjectOutputStream(foStream);
             ooStream.writeObject(trainerList);
             ooStream.close();

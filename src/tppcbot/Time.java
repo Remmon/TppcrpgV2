@@ -100,10 +100,10 @@ public class Time implements Serializable{
     
     public void loadLogFromFile(){  //Loads previous log objects from a file.
         FileInputStream fiStream = null;
-        File f = new File("D:\\tppcJavafiles\\time.tmp");
+        File f = new File("C:\\tppcJavafiles\\time.tmp");
         if(f.exists()){
             try {
-                fiStream = new FileInputStream("D:\\tppcJavafiles\\time.tmp");
+                fiStream = new FileInputStream("C:\\tppcJavafiles\\time.tmp");
                 ObjectInputStream oiStream = new ObjectInputStream(fiStream);
                 tm = (Time) oiStream.readObject();
                 oiStream.close();
@@ -126,7 +126,7 @@ public class Time implements Serializable{
     public void saveLogToFile(){ //Saves all log objects to file.
         FileOutputStream foStream = null;
         try {
-            foStream = new FileOutputStream("D:\\tppcJavafiles\\time.tmp");
+            foStream = new FileOutputStream("C:\\tppcJavafiles\\time.tmp");
             ObjectOutputStream ooStream = new ObjectOutputStream(foStream);
             ooStream.writeObject(tm);
             ooStream.close();

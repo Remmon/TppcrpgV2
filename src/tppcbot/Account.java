@@ -61,10 +61,10 @@ public class Account implements Serializable{
 
      public static void loadLogFromFile(){  //Loads previous log objects from a file.
         FileInputStream fiStream = null;
-        File f = new File("D:\\tppcJavafiles\\accounts.tmp");
+        File f = new File("C:\\tppcJavafiles\\accounts.tmp");
         if(f.exists()){
             try {
-                fiStream = new FileInputStream("D:\\tppcJavafiles\\accounts.tmp");
+                fiStream = new FileInputStream("C:\\tppcJavafiles\\accounts.tmp");
                 ObjectInputStream oiStream = new ObjectInputStream(fiStream);
                 accList = (ArrayList<Account>) oiStream.readObject();
                 System.out.println(accList);
@@ -88,7 +88,7 @@ public class Account implements Serializable{
     public static void saveLogToFile(){ //Saves all log objects to file.
         FileOutputStream foStream = null;
         try {
-            foStream = new FileOutputStream("D:\\tppcJavafiles\\accounts.tmp");
+            foStream = new FileOutputStream("C:\\tppcJavafiles\\accounts.tmp");
             ObjectOutputStream ooStream = new ObjectOutputStream(foStream);
             ooStream.writeObject(accList);
             ooStream.close();

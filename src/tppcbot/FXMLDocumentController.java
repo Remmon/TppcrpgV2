@@ -218,14 +218,14 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         controller = this;
-        System.setProperty("webdriver.chrome.driver", "D:\\tppcJavafiles\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\tppcJavafiles\\chromedriver.exe");
         driver = new ChromeDriver();
         
         
-        //System.setProperty("phantomjs.binary.path", "D:\\tppcJavafiles\\phantomjs.exe");
+        //System.setProperty("phantomjs.binary.path", "C:\\tppcJavafiles\\phantomjs.exe");
         //driver = new  PhantomJSDriver();
         //driver.manage().window().setSize(new Dimension(1820,980));
-        //System.setProperty("webdriver.phantomjs.driver","D:\\tppcJavafiles\\\\phantomjs.exe");
+        //System.setProperty("webdriver.phantomjs.driver","C:\\tppcJavafiles\\\\phantomjs.exe");
         
         
         //CaptchaBreaker cb = CaptchaBreaker.getInstance();

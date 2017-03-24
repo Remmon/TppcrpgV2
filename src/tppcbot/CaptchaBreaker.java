@@ -52,7 +52,7 @@ public class CaptchaBreaker {
         
         for(int i=0; i<Letters.length;i++){
             map.put(Letters[i], new ArrayList());
-            File file = new File("D:\\tppcJavafiles\\"+Letters[i]+".txt");
+            File file = new File("C:\\tppcJavafiles\\"+Letters[i]+".txt");
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String line;
                 while ((line = br.readLine()) != null) {
@@ -141,7 +141,7 @@ public BufferedImage shootWebElement(WebDriver driver, WebElement element) throw
 
     BufferedImage dest = img.getSubimage(p.getX()+1, p.getY()+1, width, height);
     ImageIO.write(dest, "png", screen);
-    FileUtils.copyFile(screen, new File("D:\\tppcJavafiles\\screenshot.png"));
+    FileUtils.copyFile(screen, new File("C:\\tppcJavafiles\\screenshot.png"));
     return dest;
 }
 
@@ -231,8 +231,8 @@ public String parseImage(BufferedImage img){
     String cap = compareLetters(LetterList);
     /*
         try {
-            ImageIO.write(img, "png", new File("D:\\tppcJavafiles\\captchadata\\"+cap+".png"));
-            //FileUtils.copyFile(screen, new File("D:\\tppcJavafiles\\screenshot.png"));
+            ImageIO.write(img, "png", new File("C:\\tppcJavafiles\\captchadata\\"+cap+".png"));
+            //FileUtils.copyFile(screen, new File("C:\\tppcJavafiles\\screenshot.png"));
         } catch (IOException ex) {
             Logger.getLogger(CaptchaBreaker.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -289,7 +289,7 @@ public String compareLetters(ArrayList<String> LetterList){
         }
         
         /*try{
-            PrintWriter writer = new PrintWriter("D:\\tppcJavafiles\\captchadata\\"+Captcha+".txt", "UTF-8");
+            PrintWriter writer = new PrintWriter("C:\\tppcJavafiles\\captchadata\\"+Captcha+".txt", "UTF-8");
             for(int i = 0; i < LetterList.size();i++){
                 writer.println(LetterList.get(i));
             }
